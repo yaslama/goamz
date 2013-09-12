@@ -1,9 +1,9 @@
 package ec2_test
 
 import (
-	"launchpad.net/goamz/aws"
-	"launchpad.net/goamz/ec2"
-	"launchpad.net/goamz/testutil"
+	"github.com/yaslama/goamz/aws"
+	"github.com/yaslama/goamz/ec2"
+	"github.com/yaslama/goamz/testutil"
 	. "launchpad.net/gocheck"
 	"testing"
 )

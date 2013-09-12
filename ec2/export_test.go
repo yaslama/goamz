@@ -1,7 +1,7 @@
 package ec2
 
 import (
-	"launchpad.net/goamz/aws"
+	"github.com/yaslama/goamz/aws"
 	"time"
 )
 
