@@ -247,10 +247,10 @@ type DeleteEndpointResp struct {
 //
 // See http://docs.aws.amazon.com/sns/latest/APIReference/API_DeleteEndpoint.html
 func (sns *SNS) DeleteEndpoint(endpointArn string) (resp *DeleteEndpointResp, err error) {
-	esp = &DeleteEndpointResp{}
-	arams := makeParams("DeleteEndpoint")
-	arams["EndpointArn"] = endpointArn
-	rr = sns.query(nil, nil, params, resp)
+	resp = &DeleteEndpointResp{}
+	params := makeParams("DeleteEndpoint")
+	params["EndpointArn"] = endpointArn
+	err = sns.query(nil, nil, params, resp)
 	return
 }
 
