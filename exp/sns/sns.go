@@ -214,7 +214,7 @@ func (sns *SNS) Publish(options *PublishOpt) (resp *PublishResp, err error) {
 	}
 
 	if options.TargetArn != "" {
-		params["TargetArn"] = options.TopicArn
+		params["TargetArn"] = options.TargetArn
 	}
 
 	err = sns.query(nil, nil, params, resp)
