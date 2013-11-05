@@ -29,6 +29,7 @@ import (
 	"errors"
 	"github.com/yaslama/goamz/aws"
 	"net/http"
+	//"net/http/httputil"
 	"net/url"
 	"strconv"
 	"time"
@@ -447,7 +448,7 @@ func (sns *SNS) query(topic *Topic, message *Message, params map[string]string, 
 	}
 	defer r.Body.Close()
 
-	//dump, _ := http.DumpResponse(r, true)
+	//dump, _ := httputil.DumpResponse(r, true)
 	//println("DUMP:\n", string(dump))
 	//return nil
 
