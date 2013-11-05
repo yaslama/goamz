@@ -235,7 +235,10 @@ func (sns *SNS) CreatePlatformEndpoint(appArn, token, userData string) (resp *Cr
 	params := makeParams("CreatePlatformEndpoint")
 	params["PlatformApplicationArn"] = appArn
 	params["Token"] = token
-	params["CustomUserData"] = userData
+	if userData != "" {
+		params["CustomUserData"] = userData
+	}
+	params["Enabled"] = "true"
 	err = sns.query(nil, nil, params, resp)
 	return
 }
